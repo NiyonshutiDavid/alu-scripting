@@ -8,16 +8,6 @@ import requests
 import sys
 
 def top_ten(subreddit):
-    """
-    Function to retrieve and print the titles of the first 10 hot posts
-    for a given subreddit.
-
-    Args:
-        subreddit (str): The name of the subreddit to search.
-
-    Returns:
-        None
-    """
     # Construct the URL for the Reddit API
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'}  # Specify User-Agent header
@@ -51,6 +41,3 @@ if __name__ == "__main__":
     else:
         # Call the top_ten function with the provided subreddit
         top_ten(sys.argv[1])
-
-
-
